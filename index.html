@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pentru Tine</title>
+    <style>
+        body {
+            background-color: #050505;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .heart {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            background-color: #ff7597;
+            transform: rotate(-45deg);
+            box-shadow: 0 0 40px #ff7597;
+            animation: pulse 1.2s infinite alternate;
+        }
+        .heart::before, .heart::after {
+            content: "I Love You";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: #ff7597;
+            border-radius: 50%;
+            color: #050505;
+            font-weight: bold;
+            font-family: sans-serif;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .heart::before { top: -75px; left: 0; }
+        .heart::after { top: 0; left: 75px; transform: rotate(90deg); }
+        @keyframes pulse {
+            0% { transform: rotate(-45deg) scale(1); }
+            100% { transform: rotate(-45deg) scale(1.15); }
+        }
+    </style>
+</head>
+<body>
+    <div class="heart"></div>
+</body>
+</html>
